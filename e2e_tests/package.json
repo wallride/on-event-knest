@@ -1,0 +1,27 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "rm -rf .nyc_output && rm -rf screenshots/ && mkdir screenshots && node node_modules/jest/bin/jest.js --config=jest.config.js --runInBand --verbose --detectOpenHandles && nyc report --reporter=lcov --reporter=text-summary"
+  },
+  "dependencies": {
+    "@istanbuljs/nyc-config-typescript": "1.0.2",
+    "@types/jest": "27.5.1",
+    "@types/node": "16.11.36",
+    "jest": "27.5.1",
+    "jest-playwright-preset": "1.7.2",
+    "nyc": "15.1.0",
+    "ts-jest": "27.1.5",
+    "typescript": "4.6.3",
+    "playwright": "1.21.1",
+    "playwright-chromium": "1.21.1"
+  },
+  "engines": {
+    "node": ">=14.3.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "7.18.2",
+    "@babel/preset-typescript": "7.17.12"
+  }
+}
